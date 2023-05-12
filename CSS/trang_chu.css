@@ -142,7 +142,7 @@ body {
 #image_right img {
     width: 45%;
     height: 45%;
-    /* margin: 5px; */
+    margin: 5px;
     overflow: hidden;
     position: relative;
     object-fit: contain;
