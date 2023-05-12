@@ -1,0 +1,163 @@
+<html>
+
+<head>
+    <title>Vi_du_GDCB</title>
+    <link rel="stylesheet" type="text/css" href="CSS/van_de.css">
+    <link rel="stylesheet" type="text/css" href="CSS/trang_chu.css">
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="header">
+			<div id="logo_header">
+				<h1>IOT Incubator</h1>
+			</div>
+			<div id="lish_header">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="Trang_thanh_vien.html">Members</a></li>
+					<li><a href="Trang_van_de.html" class="active">Issues</a></li>
+					<li><a href="Trang_lien_he.html">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+
+        <div id="container_vd">
+            <div class="box">
+                <h2>Tủ ấp 1</h2>
+                <div id="LED">
+                    <div class="led_container" id="warningled1">
+                        <div id="led_light_1"></div>
+                        <span>LIGHT</span>
+                    </div>
+                    <div class="led_container">
+                        <div id="led_mist_1"></div>
+                        <span>MIST</span>
+                    </div>
+                    <div class="led_container">
+                        <div id="led_fan_1"></div>
+                        <span>FAN</span>
+                    </div>
+                </div>
+
+                <div class="show_text">
+                    <h3>Temp:</h3>
+                    <p id="txt_temp_tu1"></p>
+                    <h3>Max:</h3>
+                    <p id="temp_max_tu1"></p>
+                    <h3>Min:</h3>
+                    <p id="temp_min_tu1"></p>
+                    <br>
+                    <h3>Humi:</h3>
+                    <p id="txt_humi_tu1"></p>
+                    <h3>Max:</h3>
+                    <p id="humi_max_tu1"></p>
+                    <h3>Min:</h3>
+                    <p id="humi_min_tu1"></p>
+                    <br>
+                    <h3>Mode:</h3>
+                    <p id="txt_mode_tu1"></p>
+                    <br>
+                    <h3>Connect:</h3>
+                    <p id="txt_connect_tu1"></p>
+                    <br>
+                </div>
+
+                <div id="input_tu_1">
+                    <label for="in_temp_max1">Set temp max:</label>
+                    <input type="text" id="in_temp_max1">
+                    <br>
+                    <label for="in_temp_min1">Set temp min:</label>
+                    <input type="text" id="in_temp_min1">
+                    <br>
+                    <label for="in_humi_max1">Set humi max:</label>
+                    <input type="text" id="in_humi_max1">
+                    <br>
+                    <label for="in_humi_min1">Set humi min:</label>
+                    <input type="text" id="in_humi_min1">
+                    <br>
+                    <button id="update1">update</button>
+                    <button id="bt_hide_setting1">close</button>
+                </div>
+
+                <div id="buttons">
+                    <button id="bt_show_setting1" style="padding: 0px;">SETTING</button>
+                    <button id="bt_start1">START</button>
+                    <button id="bt_mode1">MODE</button>
+                    <button id="bt_fan1">FAN</button>
+                </div>
+            </div>
+
+            <div class="box">
+                <h2>Tủ ấp 2</h2>
+                <div id="LED">
+                    <div class="led_container" id="warningled2">
+                        <div id="led_light_2"></div>
+                        <span>LIGHT</span>
+                    </div>
+                    <div class="led_container">
+                        <div id="led_mist_2"></div>
+                        <span>MIST</span>
+                    </div>
+                    <div class="led_container">
+                        <div id="led_fan_2"></div>
+                        <span>FAN</span>
+                    </div>
+                </div>
+
+                <div class="show_text">
+                    <h3>Temp:</h3>
+                    <p id="txt_temp_tu2"></p>
+                    <h3>Max:</h3>
+                    <p id="temp_max_tu2"></p>
+                    <h3>Min:</h3>
+                    <p id="temp_min_tu2"></p>
+                    <br>
+                    <h3>Humi:</h3>
+                    <p id="txt_humi_tu2"></p>
+                    <h3>Max:</h3>
+                    <p id="humi_max_tu2"></p>
+                    <h3>Min:</h3>
+                    <p id="humi_min_tu2"></p>
+                    <br>
+                    <h3>Mode:</h3>
+                    <p id="txt_mode_tu2"></p>
+                    <br>
+                    <h3>Connect:</h3>
+                    <p id="txt_connect_tu2"></p>
+                    <br>
+                </div>
+
+                <div id="input_tu_2">
+                    <label for="in_temp_max2">Set temp max:</label>
+                    <input type="text" id="in_temp_max2">
+                    <br>
+                    <label for="in_temp_min2">Set temp min:</label>
+                    <input type="text" id="in_temp_min2">
+                    <br>
+                    <label for="in_humi_max2">Set humi max:</label>
+                    <input type="text" id="in_humi_max2">
+                    <br>
+                    <label for="in_humi_min2">Set humi min:</label>
+                    <input type="text" id="in_humi_min2">
+                    <br>
+                    <button id="update2">update</button>
+                    <button id="bt_hide_setting2">close</button>
+                </div>
+
+                <div id="buttons">
+                    <button id="bt_show_setting2" style="padding: 0px;">SETTING</button>
+                    <button id="bt_start2">START</button>
+                    <button id="bt_mode2">MODE</button>
+                    <button id="bt_fan2">FAN</button>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <p>&copy;2023 IOT Incubator. All rights reserved.</p>
+        </div>
+    </div>
+    <script type="module" src="JS/van_de.js"></script>
+</body>
+
+</html>

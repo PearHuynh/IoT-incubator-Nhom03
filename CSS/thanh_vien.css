@@ -1,0 +1,82 @@
+#body_members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    flex-basis: 30%;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 15px;
+    background-color: #e2f5e8;
+    box-sizing: border-box;
+}
+
+#line_name {
+   background-color: #b0e7e3;
+   height: 60px; display: flex; 
+   align-items: center; 
+   padding-left: 10%; 
+   border-radius: 8px; 
+   margin-bottom: 10px;
+}
+
+/* img info ----------------------------------------*/
+.box_img {
+    display: flex;
+    justify-content: center;
+}
+
+.box_img img {
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+}
+
+.box_img img:hover {
+    animation: pulse 1s infinite;
+    /* Áp dụng hiệu ứng chuyển động keyframe animation khi hover */
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* text info ---------------------------------------------*/
+.box_text {
+    display: block;
+    padding: 10px;
+}
+
+.box_text h2 {
+    text-align: center;
+    font-size: 25px;
+}
+
+.box_text a {
+    text-decoration: none;
+    color: blue;
+}
+
+.box_text p {
+    display: none;
+    font-size: 25px;
+    line-height: 1.2em;
+}
+
+.box_text:hover p {
+    margin-left: 10%;
+    display: block;
+}

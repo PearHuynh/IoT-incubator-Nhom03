@@ -1,0 +1,232 @@
+/* Body style */
+body {
+    font: 100%/125% 'Times New Roman', Times, serif;
+    margin-right: 10%;
+    margin-left: 10%;
+    padding: 0px;
+    background-color: rgb(233, 248, 246);
+}
+
+/* Wrapper style */
+#wrapper {
+    margin: 10px;
+    padding: 0px;
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* Header style */
+#header {
+    display: flex;
+    padding: 10px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 2.2em;
+    border-radius: 10px;
+    background-color: #69c7bf;
+    color: #1836bd;
+}
+
+#logo_header{
+    padding: 10px;
+    margin-left: 10%;
+    background-color: #4dc2cacb;
+    box-shadow: 0 2px 4px rgba(12, 6, 6, 0.5);
+}
+
+#logo_header h1 {
+    font-size: 45px;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#lish_header {
+    margin-right: 5%;
+    margin-left: 5%;
+}
+#lish_header ul {
+    display: flex;
+}
+
+#lish_header li {
+    list-style: none;
+    margin-right: 10px;
+}
+
+#lish_header a {
+    text-decoration: none;
+    font-size: 26px;
+    color: #1836bd;
+    font-weight: bold;
+    padding: 10px;
+    background-color: #4dc2cacb;
+    box-shadow: 0 2px 4px rgba(12, 6, 6, 0.5);
+}
+
+#lish_header li a:hover:not(.active) {
+    color: white;
+    border-radius: 8px;
+}
+
+#lish_header li a.active {
+    color: white;
+    cursor: auto;
+    /* text-decoration: underline; */
+}
+
+
+
+/* image style----------------------------------------------*/
+#image_container {
+    display: flex;
+    padding: 20px;
+    background-color: antiquewhite;
+}
+
+/* style image left */
+#image_left {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#displayed-image {
+    width: 90%;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    object-fit: contain;
+    transition: transform 0.5s ease-in-out,
+        opacity 0.5s ease-in-out;
+}
+
+#image_left button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 20px;
+    height: 80px;
+    border-radius: 10px;
+}
+
+#prev-button,
+#next-button {
+    font-size: 52px;
+    background-color: antiquewhite;
+    padding: 2px;
+    border: none;
+    cursor: pointer;
+    color: #333;
+}
+
+#prev-button:hover,
+#next-button:hover {
+    background-color: white;
+    color: red;
+}
+
+
+/* Style image right */
+#image_right {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 5px;
+}
+
+#image_right img {
+    width: 45%;
+    height: 45%;
+    /* margin: 5px; */
+    overflow: hidden;
+    position: relative;
+    object-fit: contain;
+    z-index: 1;
+    transition: transform 0.3s ease-in-out;
+}
+
+#image_right img:hover {
+    z-index: 2;
+    transform: scale(1.4);
+}
+
+/* text style ---------------------------------------*/
+#text_container {
+    display: flex;
+}
+
+/* text left------------------------------------------*/
+#text_left {
+    width: 20%;
+    margin: 30px;
+}
+
+#text_left ul{
+    width: 80%;
+    padding-top: 10;
+    padding-bottom: 10;
+    margin: 0;
+    padding-left: 30px;
+    border-radius: 5px;
+    list-style-type: none;
+    border: 1px solid black;
+    background-color: rgb(225, 246, 250);
+    
+}
+
+#text_left li a{
+    padding-top: 10;
+    padding-bottom: 10;
+    color: black;
+    padding-left: 10;
+    display: block;
+    text-decoration: none;
+    font-size: 21px;
+    line-height: 1.2em;
+}
+#text_left li a:hover:not(.active){
+    background-color: rgb(35, 196, 196);
+    color: white;
+    width: 80%;
+    border-radius: 8px;
+}
+#text_left li a.active{
+    background-color: blue;
+    color: white;
+    border-radius: 8px;
+    cursor: auto;
+}
+
+/* style right------------------------------------------*/
+#text_right {
+    width: 80%;
+    margin: 30px;
+}
+
+#text_right p {
+    font-size: 25px;
+    text-indent: 40px;
+    line-height: 1.2em;
+    margin-bottom: 20px;
+}
+
+/* Footer styles */
+#footer {
+    clear: both;
+    text-align: center;
+    margin-top: 25px;
+    background-color: #69c7bf;
+    border-radius: 6px;
+}
+
+#footer p {
+    font-size: 15pt;
+    color: black;
+    padding: 15px;
+    font-weight: bolder;
+}

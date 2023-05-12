@@ -1,0 +1,247 @@
+	/*------------------------box body---------------------------*/
+	#container_vd {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.box {
+		flex-basis: 45%;
+		padding: 20px;
+		margin: 10px;
+		margin-top: 20px;
+		box-sizing: border-box;
+		background-color: antiquewhite;
+	}
+
+	.box h2 {
+		padding: 15px;
+		margin-top: 5px;
+		text-align: center;
+		background-color: rgb(159, 226, 243);
+		color: black;
+		font-size: 30;
+		border-radius: 5px;
+	}
+
+	/*------------------------LED-------------------------------*/
+	#LED {
+		display: flex;
+		justify-content: center;
+	}
+
+	.led_container {
+		width: 150px;
+		display: inline-block;
+		text-align: center;
+		margin: 0 20px;
+		padding: 10px;
+		border-radius: 10px;
+		background-color: rgb(217, 240, 238);
+	}
+
+	.led_container span {
+		display: block;
+		font-size: 19;
+	}
+
+	#led_light_1 {
+		width: 60px;
+		height: 60px;
+		background-color: gray;
+		border-radius: 50%;
+		border: 0px;
+		margin: 0 auto 20px;
+		box-shadow: 0 0 20px 0 gray;
+	}
+
+	#led_mist_1 {
+		width: 60px;
+		height: 60px;
+		background-color: gray;
+		border-radius: 50%;
+		border: 0px;
+		margin: 0 auto 20px;
+		box-shadow: 0 0 20px 0 gray;
+	}
+
+	#led_fan_1 {
+		width: 60px;
+		height: 60px;
+		background-color: gray;
+		border-radius: 50%;
+		border: 0px;
+		margin: 0 auto 20px;
+		box-shadow: 0 0 20px 0 gray;
+	}
+
+	#led_light_2 {
+		width: 60px;
+		height: 60px;
+		background-color: gray;
+		border-radius: 50%;
+		border: 0px;
+		margin: 0 auto 20px;
+		box-shadow: 0 0 20px 0 gray;
+	}
+
+	#led_mist_2 {
+		width: 60px;
+		height: 60px;
+		background-color: gray;
+		border-radius: 50%;
+		border: 0px;
+		margin: 0 auto 20px;
+		box-shadow: 0 0 20px 0 gray;
+	}
+
+	#led_fan_2 {
+		width: 60px;
+		height: 60px;
+		background-color: gray;
+		border-radius: 50%;
+		border: 0px;
+		margin: 0 auto 20px;
+		box-shadow: 0 0 20px 0 gray;
+	}
+
+	/*------------------------show text-----------------------------*/
+	.show_text {
+		display: block;
+		width: 80%;
+		margin-left: 10%;
+		padding: 5px;
+	}
+
+	.show_text h3 {
+		width: 100px;
+		display: inline-block;
+		font-size: 25;
+	}
+
+	.show_text p {
+		width: 60px;
+		font-size: 25;
+		display: inline-block;
+	}
+
+	/*------------------------input1-----------------------------*/
+	#input_tu_1 {
+		display: none;
+	}
+
+	#input_tu_1.show {
+		display: block;
+		width: 60%;
+		border-radius: 10px;
+		margin-left: 10%;
+		margin-bottom: 5%;
+		padding: 20px;
+		background-color: rgb(212, 236, 236);
+	}
+
+	#input_tu_1 label {
+		display: inline-block;
+		margin-left: 25px;
+		width: 200px;
+		font-size: 25;
+		line-height: 1.5em;
+	}
+
+	#input_tu_1 input {
+		display: inline-block;
+		width: 120px;
+		font-size: 21;
+	}
+
+	#input_tu_1 button#update1 {
+		width: 80px;
+		font-size: 21px;
+		padding: 2px;
+		border-color: white;
+		border-radius: 5px;
+		margin-top: 10px;
+		margin-left: 50%;
+		background-color: aqua;
+	}
+	#input_tu_1 button#bt_hide_setting1 {
+		width: 80px;
+		font-size: 21px;
+		padding: 2px;
+		border-color: white;
+		border-radius: 5px;
+		margin-top: 10px;
+		background-color: aqua;
+	}
+
+	#input_tu_2 {
+		display: none;
+	}
+
+	#input_tu_2.show {
+		display: block;
+		width: 60%;
+		border-radius: 10px;
+		margin-left: 10%;
+		margin-bottom: 5%;
+		padding: 20px;
+		background-color: rgb(212, 236, 236);
+	}
+
+	#input_tu_2 label {
+		display: inline-block;
+		margin-left: 25px;
+		width: 200px;
+		font-size: 25;
+		line-height: 1.5em;
+	}
+
+	#input_tu_2 input {
+		display: inline-block;
+		width: 120px;
+		font-size: 21;
+	}
+
+	#input_tu_2 button#update2 {
+		width: 80px;
+		font-size: 21px;
+		padding: 2px;
+		border-color: white;
+		border-radius: 5px;
+		margin-top: 10px;
+		margin-left: 50%;
+		background-color: aqua;
+	}
+	#input_tu_2 button#bt_hide_setting2 {
+		width: 80px;
+		font-size: 21px;
+		padding: 2px;
+		border-color: white;
+		border-radius: 5px;
+		margin-top: 10px;
+		background-color: aqua;
+	}
+	/*------------------------button-----------------------------*/
+	#buttons {
+		display: flex;
+		width: 80%;
+		justify-content: space-between;
+		margin-left: 10%;
+	}
+
+	#buttons button {
+		width: 20%;
+		padding: 10px 20px;
+		border: none;
+		border-radius: 3px;
+		cursor: pointer;
+		background-color: gray;
+		color: #fff;
+		font-size: 21;
+
+	}
+
+	#buttons button:active {
+		background-color: red;
+	}

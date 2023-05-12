@@ -1,0 +1,71 @@
+<html>
+
+<head>
+    <title>IOT Incubator</title>
+    <link rel="stylesheet" href="CSS/trang_chu.css">
+    <link rel="stylesheet" href="CSS/lien_he.css">
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <div id="logo_header">
+                <h1>IOT Incubator</h1>
+            </div>
+            <div id="lish_header">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Trang_thanh_vien.html">Members</a></li>
+                    <li><a href="Trang_van_de.html">Issues</a></li>
+                    <li><a href="Trang_lien_he.html" class="active">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="container_lh">
+            <div id="contact_info">
+                <h2>Thông tin liên hệ</h2>
+                <p><strong>Tên:</strong> Nhóm 03 - Công nghệ IoT và Ứng dụng.</p>
+                <p><strong>Email:</strong> nhom03IoT@gmail.com</p>
+                <p><strong>Điện thoại:</strong> 0962******</p>
+                <p><strong>Địa chỉ:</strong> Trường Bách Khoa - Đại học Cần Thơ <br>
+                    Khu vực II, đường 3/2, p. Xuân Khánh, q. Ninh Kiều, TP. Cần Thơ.</p>
+                <div id="img_info">
+                    <a href="https://www.ctu.edu.vn" target="_blank">
+                        <img src="image/Dh-Can-Tho.jpg" alt="CTU">
+                    </a>
+                </div>
+            </div>
+
+            <div id="contact_form">
+                <h2>Gửi tin nhắn cho chúng tôi</h2>
+                <form method="POST" action="http:.../huynhpear0411@gmail.com">
+                    <label for="name">Họ và tên*:</label>
+                    <br>
+                    <input type="text" id="in_name" name="name" required placeholder="Huỳnh Văn A">
+                    <!-- required //hiện cảnh báo nếu người dùng không nhập vào input này -->
+                    <br>
+                    <label for="email">Email*:</label>
+                    <br>
+                    <input type="email" id="in_email" name="email" required placeholder="huynhvana@gmail.com">
+                    <br>
+                    <label for="phone">Điện thoại*:</label>
+                    <br>
+                    <input type="tel" id="in_phone" name="phone" required placeholder="0961223456">
+                    <br>
+                    <label for="message">Tin nhắn:</label>
+                    <br>
+                    <textarea id="message" name="in_message" rows="5"></textarea>
+                    <!-- <textarea> để tạo một trường văn bản đa dòng -->
+                    <input type="submit" value="Gửi tin nhắn" id="bt_submit">
+                </form>
+            </div>
+        </div>
+
+        <div id="footer">
+            <p>&copy;2023 IOT Incubator. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+
+</html>
