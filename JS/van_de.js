@@ -37,7 +37,6 @@ var light1_st = 0,
     temp1 = 0,
     humi1 = 0;
 var timeout1 = 0, pre_connect1 = 0;
-var temp_max1, temp_min1, humi_max1, humi_min1;
 
 //Den bao 
 var led_light_1 = document.getElementById("led_light_1");
@@ -102,14 +101,10 @@ function read_tu_ap_1() {
         })
     get(child(ref(db), "tu_ap_1/set_val"))
         .then((snapshot) => {
-            temp_max1 = snapshot.val().temp_max;
-            temp_min1 = snapshot.val().temp_min;
-            humi_max1 = snapshot.val().humi_max;
-            humi_min1 = snapshot.val().humi_min;
-            txt_temp_max_tu1.innerHTML = temp_max1 + " C";
-            txt_temp_min_tu1.innerHTML = temp_min1 + " C";
-            txt_humi_max_tu1.innerHTML = humi_max1 + " %";
-            txt_humi_min_tu1.innerHTML = humi_min1 + " %";
+            txt_temp_max_tu1.innerHTML = snapshot.val().temp_max; + " C";
+            txt_temp_min_tu1.innerHTML = snapshot.val().temp_min; + " C";
+            txt_humi_max_tu1.innerHTML = snapshot.val().humi_max; + " %";
+            txt_humi_min_tu1.innerHTML = snapshot.val().humi_min; + " %";
         })
         .catch((error) => {
             alert(error)
