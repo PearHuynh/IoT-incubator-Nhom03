@@ -37,6 +37,7 @@ var light1_st = 0,
     temp1 = 0,
     humi1 = 0;
 var timeout1 = 0, pre_connect1 = 0;
+var temp_max1, temp_min1, humi_max1, humi_min1;
 
 //Den bao 
 var led_light_1 = document.getElementById("led_light_1");
@@ -101,10 +102,14 @@ function read_tu_ap_1() {
         })
     get(child(ref(db), "tu_ap_1/set_val"))
         .then((snapshot) => {
-            txt_temp_max_tu1.innerHTML = snapshot.val().temp_max + " C";
-            txt_temp_min_tu1.innerHTML = snapshot.val().temp_min + " C";
-            txt_humi_max_tu1.innerHTML = snapshot.val().humi_max + " %";
-            txt_humi_min_tu1.innerHTML = snapshot.val().humi_min + " %";
+            temp_max1 = snapshot.val().temp_max;
+            temp_min1 = snapshot.val().temp_min;
+            humi_max1 = snapshot.val().humi_max;
+            humi_min1 = snapshot.val().humi_min;
+            txt_temp_max_tu1.innerHTML = temp_max1 + " C";
+            txt_temp_min_tu1.innerHTML = temp_min1 + " C";
+            txt_humi_max_tu1.innerHTML = humi_max1 + " %";
+            txt_humi_min_tu1.innerHTML = humi_min1 + " %";
         })
         .catch((error) => {
             alert(error)
@@ -176,29 +181,46 @@ function show_state1() {
 
 //chuong trinh setting max min
 function set_tu_1() {
-    if (in_temp_max1.value != null && in_temp_max1.value != "") {
-        update(ref(db, "tu_ap_1/set_val/"), {
-            temp_max: parseInt(in_temp_max1.value),
-        })
-            .catch((error) => { alert(error) })
+    if (in_temp_max1.value != null && in_temp_max1.value != "" && !isNaN(in_temp_max1.value)) {
+        if (in_temp_min1.value != null && in_temp_min1.value != "" && !isNaN(in_temp_min1.value)) {
+            if (in_temp_max1.value >= in_temp_min1.value) {
+                update(ref(db, "tu_ap_1/set_val/"), {
+                    temp_max: parseInt(in_temp_max1.value),
+                })
+                    .catch((error) => { alert(error) })
+                update(ref(db, "tu_ap_1/set_val/"), {
+                    temp_min: parseInt(in_temp_min1.value),
+                })
+                    .catch((error) => { alert(error) })
+            } else {
+                alert("Temp max phải lớn hơn temp min.")
+            }
+        } else {
+            alert("Vui lòng nhập temp min là một số!")
+        }
+    } else {
+        alert("Vui lòng nhập temp max là một số!")
     }
-    if (in_temp_min1.value != null && in_temp_min1.value != "") {
-        update(ref(db, "tu_ap_1/set_val/"), {
-            temp_min: parseInt(in_temp_min1.value),
-        })
-            .catch((error) => { alert(error) })
-    }
-    if (in_humi_max1.value != null && in_humi_max1.value != "") {
-        update(ref(db, "tu_ap_1/set_val/"), {
-            humi_max: parseInt(in_humi_max1.value),
-        })
-            .catch((error) => { alert(error) })
-    }
-    if (in_humi_min1.value != null && in_humi_min1.value != "") {
-        update(ref(db, "tu_ap_1/set_val/"), {
-            humi_min: parseInt(in_humi_min1.value),
-        })
-            .catch((error) => { alert(error) })
+
+    if (in_humi_max1.value != null && in_humi_max1.value != "" && !isNaN(in_humi_max1.value)) {
+        if (in_humi_min1.value != null && in_humi_min1.value != "" && !isNaN(in_humi_min1.value)) {
+            if (in_humi_max1.value >= in_humi_min1.value) {
+                update(ref(db, "tu_ap_1/set_val/"), {
+                    humi_max: parseInt(in_humi_max1.value),
+                })
+                    .catch((error) => { alert(error) })
+                update(ref(db, "tu_ap_1/set_val/"), {
+                    humi_min: parseInt(in_humi_min1.value),
+                })
+                    .catch((error) => { alert(error) })
+            } else {
+                alert("Humi max phải lớn hơn humi min.")
+            }
+        } else {
+            alert("Vui lòng nhập humi min là một số!")
+        }
+    } else {
+        alert("Vui lòng nhập humi max là một số!")
     }
 }
 
@@ -401,29 +423,46 @@ function show_state2() {
 }
 
 function set_tu_2() {
-    if (in_temp_max2.value != null && in_temp_max2.value != "") {
-        update(ref(db, "tu_ap_2/set_val/"), {
-            temp_max: parseInt(in_temp_max2.value),
-        })
-            .catch((error) => { alert(error) })
+    if (in_temp_max2.value != null && in_temp_max2.value != "" && !isNaN(in_temp_max2.value)) {
+        if (in_temp_min2.value != null && in_temp_min2.value != "" && !isNaN(in_temp_min2.value)) {
+            if (in_temp_max2.value >= in_temp_min2.value) {
+                update(ref(db, "tu_ap_2/set_val/"), {
+                    temp_max: parseInt(in_temp_max2.value),
+                })
+                    .catch((error) => { alert(error) })
+                update(ref(db, "tu_ap_2/set_val/"), {
+                    temp_min: parseInt(in_temp_min2.value),
+                })
+                    .catch((error) => { alert(error) })
+            } else {
+                alert("Temp max phải lớn hơn temp min.")
+            }
+        } else {
+            alert("Vui lòng nhập temp min là một số!")
+        }
+    } else {
+        alert("Vui lòng nhập temp max là một số!")
     }
-    if (in_temp_min2.value != null && in_temp_min2.value != "") {
-        update(ref(db, "tu_ap_2/set_val/"), {
-            temp_min: parseInt(in_temp_min2.value),
-        })
-            .catch((error) => { alert(error) })
-    }
-    if (in_humi_max2.value != null && in_humi_max2.value != "") {
-        update(ref(db, "tu_ap_2/set_val/"), {
-            humi_max: parseInt(in_humi_max2.value),
-        })
-            .catch((error) => { alert(error) })
-    }
-    if (in_humi_min2.value != null && in_humi_min2.value != "") {
-        update(ref(db, "tu_ap_2/set_val/"), {
-            humi_min: parseInt(in_humi_min2.value),
-        })
-            .catch((error) => { alert(error) })
+
+    if (in_humi_max2.value != null && in_humi_max2.value != "" && !isNaN(in_humi_max2.value)) {
+        if (in_humi_min2.value != null && in_humi_min2.value != "" && !isNaN(in_humi_min2.value)) {
+            if (in_humi_max2.value >= in_humi_min2.value) {
+                update(ref(db, "tu_ap_2/set_val/"), {
+                    humi_max: parseInt(in_humi_max2.value),
+                })
+                    .catch((error) => { alert(error) })
+                update(ref(db, "tu_ap_2/set_val/"), {
+                    humi_min: parseInt(in_humi_min2.value),
+                })
+                    .catch((error) => { alert(error) })
+            } else {
+                alert("Humi max phải lớn hơn humi min.")
+            }
+        } else {
+            alert("Vui lòng nhập humi min là một số!")
+        }
+    } else {
+        alert("Vui lòng nhập humi max là một số!")
     }
 }
 
