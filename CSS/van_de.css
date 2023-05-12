@@ -149,6 +149,12 @@
 		line-height: 1.5em;
 	}
 
+	#input_tu_1 p {
+		margin-left: 25px;
+		font-size: 18px;
+		color: red;
+	}
+
 	#input_tu_1 input {
 		display: inline-block;
 		width: 120px;
@@ -165,6 +171,7 @@
 		margin-left: 50%;
 		background-color: aqua;
 	}
+
 	#input_tu_1 button#bt_hide_setting1 {
 		width: 70px;
 		font-size: 18px;
@@ -198,6 +205,12 @@
 		line-height: 1.5em;
 	}
 
+	#input_tu_2 p {
+		margin-left: 25px;
+		font-size: 18px;
+		color: red;
+	}
+
 	#input_tu_2 input {
 		display: inline-block;
 		width: 120px;
@@ -214,6 +227,7 @@
 		margin-left: 50%;
 		background-color: aqua;
 	}
+
 	#input_tu_2 button#bt_hide_setting2 {
 		width: 70px;
 		font-size: 18px;
@@ -223,6 +237,7 @@
 		margin-top: 10px;
 		background-color: aqua;
 	}
+
 	/*------------------------button-----------------------------*/
 	#buttons {
 		display: flex;

@@ -56,6 +56,7 @@ var txt_humi_min_tu1 = document.getElementById("humi_min_tu1");
 
 var txt_mode_tu1 = document.getElementById("txt_mode_tu1");
 var txt_connect_tu1 = document.getElementById("txt_connect_tu1");
+var error_tu1 = document.getElementById("error_tu1");
 
 //setting max min
 var in_temp_max1 = document.getElementById("in_temp_max1");
@@ -187,14 +188,15 @@ function set_tu_1() {
                     temp_min: parseInt(in_temp_min1.value),
                 })
                     .catch((error) => { alert(error) })
+                error_tu1.innerHTML = "Cập nhật thành công.";
             } else {
-                alert("Temp max phải lớn hơn temp min.")
+                error_tu1.innerHTML = "Temp max phải lớn hơn temp min.";
             }
         } else {
-            alert("Vui lòng nhập temp min là một số!")
+            error_tu1.innerHTML = "Vui lòng nhập temp min là một số!";
         }
     } else {
-        alert("Vui lòng nhập temp max là một số!")
+        error_tu1.innerHTML = "Vui lòng nhập temp max là một số!";
     }
 
     if (in_humi_max1.value != null && in_humi_max1.value != "" && !isNaN(in_humi_max1.value)) {
@@ -208,14 +210,15 @@ function set_tu_1() {
                     humi_min: parseInt(in_humi_min1.value),
                 })
                     .catch((error) => { alert(error) })
+                error_tu1.innerHTML = "Cập nhật thành công.";
             } else {
-                alert("Humi max phải lớn hơn humi min.")
+                error_tu1.innerHTML = "Humi max phải lớn hơn humi min.";
             }
         } else {
-            alert("Vui lòng nhập humi min là một số!")
+            error_tu1.innerHTML = "Vui lòng nhập humi min là một số!";
         }
     } else {
-        alert("Vui lòng nhập humi max là một số!")
+        error_tu1.innerHTML = "Vui lòng nhập humi max là một số!";
     }
 }
 
@@ -310,6 +313,7 @@ var txt_humi_min_tu2 = document.getElementById("humi_min_tu2");
 
 var txt_mode_tu2 = document.getElementById("txt_mode_tu2");
 var txt_connect_tu2 = document.getElementById("txt_connect_tu2");
+var error_tu2 = document.getElementById("error_tu2");
 
 var in_temp_max2 = document.getElementById("in_temp_max2");
 var in_temp_min2 = document.getElementById("in_temp_min2");
@@ -429,14 +433,15 @@ function set_tu_2() {
                     temp_min: parseInt(in_temp_min2.value),
                 })
                     .catch((error) => { alert(error) })
+                    error_tu2.innerHTML = "Cập nhật thành công.";
             } else {
-                alert("Temp max phải lớn hơn temp min.")
+                error_tu2.innerHTML = "Temp max phải lớn hơn temp min.";
             }
         } else {
-            alert("Vui lòng nhập temp min là một số!")
+            error_tu2.innerHTML = "Vui lòng nhập temp min là một số!";
         }
     } else {
-        alert("Vui lòng nhập temp max là một số!")
+        error_tu2.innerHTML = "Vui lòng nhập temp max là một số!";
     }
 
     if (in_humi_max2.value != null && in_humi_max2.value != "" && !isNaN(in_humi_max2.value)) {
@@ -450,14 +455,15 @@ function set_tu_2() {
                     humi_min: parseInt(in_humi_min2.value),
                 })
                     .catch((error) => { alert(error) })
+                    error_tu2.innerHTML = "Cập nhật thành công.";
             } else {
-                alert("Humi max phải lớn hơn humi min.")
+                error_tu2.innerHTML = "Humi max phải lớn hơn humi min.";
             }
         } else {
-            alert("Vui lòng nhập humi min là một số!")
+            error_tu2.innerHTML = "Vui lòng nhập humi min là một số!";
         }
     } else {
-        alert("Vui lòng nhập humi max là một số!")
+        error_tu2.innerHTML = "Vui lòng nhập humi max là một số!";
     }
 }
 
