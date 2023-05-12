@@ -7,7 +7,7 @@
 	}
 
 	.box {
-		flex-basis: 40%;
+		flex-basis: 45%;
 		padding: 20px;
 		margin: 10px;
 		margin-top: 20px;
@@ -21,7 +21,7 @@
 		text-align: center;
 		background-color: rgb(159, 226, 243);
 		color: black;
-		font-size: 30;
+		font-size: 30px;
 		border-radius: 5px;
 	}
 
@@ -32,10 +32,10 @@
 	}
 
 	.led_container {
-		width: 150px;
+		width: 120px;
 		display: inline-block;
 		text-align: center;
-		margin: 0 20px;
+		margin: 10px;
 		padding: 10px;
 		border-radius: 10px;
 		background-color: rgb(217, 240, 238);
@@ -47,8 +47,8 @@
 	}
 
 	#led_light_1 {
-		width: 60px;
-		height: 60px;
+		width: 50px;
+		height: 50px;
 		background-color: gray;
 		border-radius: 50%;
 		border: 0px;
@@ -57,8 +57,8 @@
 	}
 
 	#led_mist_1 {
-		width: 60px;
-		height: 60px;
+		width: 50px;
+		height: 50px;
 		background-color: gray;
 		border-radius: 50%;
 		border: 0px;
@@ -67,8 +67,8 @@
 	}
 
 	#led_fan_1 {
-		width: 60px;
-		height: 60px;
+		width: 50px;
+		height: 50px;
 		background-color: gray;
 		border-radius: 50%;
 		border: 0px;
@@ -77,8 +77,8 @@
 	}
 
 	#led_light_2 {
-		width: 60px;
-		height: 60px;
+		width: 50px;
+		height: 50px;
 		background-color: gray;
 		border-radius: 50%;
 		border: 0px;
@@ -87,8 +87,8 @@
 	}
 
 	#led_mist_2 {
-		width: 60px;
-		height: 60px;
+		width: 50px;
+		height: 50px;
 		background-color: gray;
 		border-radius: 50%;
 		border: 0px;
@@ -97,8 +97,8 @@
 	}
 
 	#led_fan_2 {
-		width: 60px;
-		height: 60px;
+		width: 50px;
+		height: 50px;
 		background-color: gray;
 		border-radius: 50%;
 		border: 0px;
@@ -109,20 +109,20 @@
 	/*------------------------show text-----------------------------*/
 	.show_text {
 		display: block;
-		width: 80%;
-		margin-left: 10%;
+		width: 90%;
+		margin-left: 5%;
 		padding: 5px;
 	}
 
 	.show_text h3 {
-		width: 100px;
+		width: 80px;
 		display: inline-block;
-		font-size: 25;
+		font-size: 21;
 	}
 
 	.show_text p {
 		width: 60px;
-		font-size: 25;
+		font-size: 21;
 		display: inline-block;
 	}
 
@@ -133,7 +133,7 @@
 
 	#input_tu_1.show {
 		display: block;
-		width: 60%;
+		width: 70%;
 		border-radius: 10px;
 		margin-left: 10%;
 		margin-bottom: 5%;
@@ -145,19 +145,19 @@
 		display: inline-block;
 		margin-left: 25px;
 		width: 200px;
-		font-size: 25;
+		font-size: 21;
 		line-height: 1.5em;
 	}
 
 	#input_tu_1 input {
 		display: inline-block;
 		width: 120px;
-		font-size: 21;
+		font-size: 18;
 	}
 
 	#input_tu_1 button#update1 {
-		width: 80px;
-		font-size: 21px;
+		width: 70px;
+		font-size: 18px;
 		padding: 2px;
 		border-color: white;
 		border-radius: 5px;
@@ -166,8 +166,8 @@
 		background-color: aqua;
 	}
 	#input_tu_1 button#bt_hide_setting1 {
-		width: 80px;
-		font-size: 21px;
+		width: 70px;
+		font-size: 18px;
 		padding: 2px;
 		border-color: white;
 		border-radius: 5px;
@@ -175,13 +175,14 @@
 		background-color: aqua;
 	}
 
+	/*--------------------------------------------------- */
 	#input_tu_2 {
 		display: none;
 	}
 
 	#input_tu_2.show {
 		display: block;
-		width: 60%;
+		width: 70%;
 		border-radius: 10px;
 		margin-left: 10%;
 		margin-bottom: 5%;
@@ -193,19 +194,19 @@
 		display: inline-block;
 		margin-left: 25px;
 		width: 200px;
-		font-size: 25;
+		font-size: 21;
 		line-height: 1.5em;
 	}
 
 	#input_tu_2 input {
 		display: inline-block;
 		width: 120px;
-		font-size: 21;
+		font-size: 18;
 	}
 
 	#input_tu_2 button#update2 {
-		width: 80px;
-		font-size: 21px;
+		width: 70px;
+		font-size: 18px;
 		padding: 2px;
 		border-color: white;
 		border-radius: 5px;
@@ -214,8 +215,8 @@
 		background-color: aqua;
 	}
 	#input_tu_2 button#bt_hide_setting2 {
-		width: 80px;
-		font-size: 21px;
+		width: 70px;
+		font-size: 18px;
 		padding: 2px;
 		border-color: white;
 		border-radius: 5px;
@@ -238,7 +239,7 @@
 		cursor: pointer;
 		background-color: gray;
 		color: #fff;
-		font-size: 21;
+		font-size: 16;
 
 	}
 
