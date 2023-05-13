@@ -25,6 +25,7 @@ const analytics = getAnalytics(app);
 const db = getDatabase();
 /*-----end Firebase------------------------------------------------------*/
 
+// link update github name iotnhom3
 
 /*-----Control tu 1-----------------------------------------------------*/
 var light1_st = 0,
@@ -179,46 +180,53 @@ function show_state1() {
 function set_tu_1() {
     if (in_temp_max1.value != null && in_temp_max1.value != "" && !isNaN(in_temp_max1.value)) {
         if (in_temp_min1.value != null && in_temp_min1.value != "" && !isNaN(in_temp_min1.value)) {
-            if (in_temp_max1.value >= in_temp_min1.value) {
-                update(ref(db, "tu_ap_1/set_val/"), {
-                    temp_max: parseInt(in_temp_max1.value),
-                })
-                    .catch((error) => { alert(error) })
-                update(ref(db, "tu_ap_1/set_val/"), {
-                    temp_min: parseInt(in_temp_min1.value),
-                })
-                    .catch((error) => { alert(error) })
-                error_tu1.innerHTML = "Cập nhật thành công.";
+            // ------------------------------------------------------------------------------------------------
+            if (in_humi_max1.value != null && in_humi_max1.value != "" && !isNaN(in_humi_max1.value)) {
+                if (in_humi_min1.value != null && in_humi_min1.value != "" && !isNaN(in_humi_min1.value)) {
+                    // ----------------------------------------------------------------------------------------
+                    if (in_temp_max1.value >= in_temp_min1.value) {
+                        // ------------------------------------------------------------------------------------
+                        if (in_humi_max1.value >= in_humi_min1.value) {
+                            // --------------------------------------------------------------------------------
+                            update(ref(db, "tu_ap_1/set_val/"), {
+                                temp_max: parseInt(in_temp_max1.value),
+                            })
+                                .catch((error) => { alert(error) })
+                            update(ref(db, "tu_ap_1/set_val/"), {
+                                temp_min: parseInt(in_temp_min1.value),
+                            })
+                                .catch((error) => { alert(error) })
+                            // --------------------------------------------------------------------------------
+                            update(ref(db, "tu_ap_1/set_val/"), {
+                                humi_max: parseInt(in_humi_max1.value),
+                            })
+                                .catch((error) => { alert(error) })
+                            update(ref(db, "tu_ap_1/set_val/"), {
+                                humi_min: parseInt(in_humi_min1.value),
+                            })
+                                .catch((error) => { alert(error) })
+                            // --------------------------------------------------------------------------------
+                            error_tu1.innerHTML = "Cập nhật thành công.";
+                        } else {
+                            error_tu1.innerHTML = "Humi max phải lớn hơn humi min.";
+                        }
+                        // ------------------------------------------------------------------------------------
+                    } else {
+                        error_tu1.innerHTML = "Temp max phải lớn hơn temp min.";
+                    }
+                    // ----------------------------------------------------------------------------------------
+                } else {
+                    error_tu1.innerHTML = "Vui lòng nhập humi min là một số!";
+                }
             } else {
-                error_tu1.innerHTML = "Temp max phải lớn hơn temp min.";
+                error_tu1.innerHTML = "Vui lòng nhập humi max là một số!";
             }
+            // ------------------------------------------------------------------------------------------------
         } else {
             error_tu1.innerHTML = "Vui lòng nhập temp min là một số!";
         }
     } else {
         error_tu1.innerHTML = "Vui lòng nhập temp max là một số!";
-    }
-
-    if (in_humi_max1.value != null && in_humi_max1.value != "" && !isNaN(in_humi_max1.value)) {
-        if (in_humi_min1.value != null && in_humi_min1.value != "" && !isNaN(in_humi_min1.value)) {
-            if (in_humi_max1.value >= in_humi_min1.value) {
-                update(ref(db, "tu_ap_1/set_val/"), {
-                    humi_max: parseInt(in_humi_max1.value),
-                })
-                    .catch((error) => { alert(error) })
-                update(ref(db, "tu_ap_1/set_val/"), {
-                    humi_min: parseInt(in_humi_min1.value),
-                })
-                    .catch((error) => { alert(error) })
-                error_tu1.innerHTML = "Cập nhật thành công.";
-            } else {
-                error_tu1.innerHTML = "Humi max phải lớn hơn humi min.";
-            }
-        } else {
-            error_tu1.innerHTML = "Vui lòng nhập humi min là một số!";
-        }
-    } else {
-        error_tu1.innerHTML = "Vui lòng nhập humi max là một số!";
     }
 }
 
@@ -433,7 +441,7 @@ function set_tu_2() {
                     temp_min: parseInt(in_temp_min2.value),
                 })
                     .catch((error) => { alert(error) })
-                    error_tu2.innerHTML = "Cập nhật thành công.";
+                error_tu2.innerHTML = "Cập nhật thành công.";
             } else {
                 error_tu2.innerHTML = "Temp max phải lớn hơn temp min.";
             }
@@ -455,7 +463,7 @@ function set_tu_2() {
                     humi_min: parseInt(in_humi_min2.value),
                 })
                     .catch((error) => { alert(error) })
-                    error_tu2.innerHTML = "Cập nhật thành công.";
+                error_tu2.innerHTML = "Cập nhật thành công.";
             } else {
                 error_tu2.innerHTML = "Humi max phải lớn hơn humi min.";
             }
