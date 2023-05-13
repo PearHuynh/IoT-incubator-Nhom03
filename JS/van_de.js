@@ -26,6 +26,7 @@ const db = getDatabase();
 /*-----end Firebase------------------------------------------------------*/
 
 // link update github name iotnhom3
+//cmd
 
 /*-----Control tu 1-----------------------------------------------------*/
 var light1_st = 0,
