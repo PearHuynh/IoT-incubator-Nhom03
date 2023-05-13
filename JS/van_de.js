@@ -25,7 +25,7 @@ const analytics = getAnalytics(app);
 const db = getDatabase();
 /*-----end Firebase------------------------------------------------------*/
 
-// link update github name iotnhom3
+// link update github name iotnhom03
 //cmd
 
 /*-----Control tu 1-----------------------------------------------------*/
@@ -104,10 +104,10 @@ function read_tu_ap_1() {
         })
     get(child(ref(db), "tu_ap_1/set_val"))
         .then((snapshot) => {
-            txt_temp_max_tu1.innerHTML = snapshot.val().temp_max; + " C";
-            txt_temp_min_tu1.innerHTML = snapshot.val().temp_min; + " C";
-            txt_humi_max_tu1.innerHTML = snapshot.val().humi_max; + " %";
-            txt_humi_min_tu1.innerHTML = snapshot.val().humi_min; + " %";
+            txt_temp_max_tu1.innerHTML = snapshot.val().temp_max + " C";
+            txt_temp_min_tu1.innerHTML = snapshot.val().temp_min + " C";
+            txt_humi_max_tu1.innerHTML = snapshot.val().humi_max + " %";
+            txt_humi_min_tu1.innerHTML = snapshot.val().humi_min + " %";
         })
         .catch((error) => {
             alert(error)
