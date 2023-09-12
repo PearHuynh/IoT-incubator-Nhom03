@@ -1,0 +1,30 @@
+	* Cách đẩy toàn bộ dự án lên github
+1. Tạo local repo cho dự án tại cửa sổ terminal trong VScode.
+	> git init
+2. Lưu code dự án vào local repo. 
+	> git add . //Chọn tất cả hoặc 'git add README.md' chọn từng tệp
+	> git commit -m "first commit" "VD ghi chú phiên bản: first commit"
+3. Tạo repository trên github
+	github.com/new
+4. Đẩy dự án từ git lên github
+	> git remote add <Đặt tên gợi nhớ cho link sau> https://name-of-the-repository-link
+		ex: git remote add iotnhom03 https://github.com/PearHuynh/IoT-incubator-Nhom03.git 
+	> git push <Tên gợi nhớ link> <branch-name: Chọn master trong nhiều nhánh khác nhau>
+
+//--------------------------------------------------------------------------------------------
+	* Cách cập nhật file lên github
+1. Chọn file cần chỉnh sửa
+	> git add index.html
+2. commit
+	> git commit -m "Sửa đổi gì đó có thể ghi chú"
+3. push lên github
+	> git push <Tên gợi nhớ link> <branch-name: Chọn master trong nhiều nhánh khác nhau>
+
+//--------------------------------------------------------------------------------------------
+	* Cách cập nhật file lên github iotnhom03
+1. Chọn file cần chỉnh sửa
+	> git add ... (ex: git add index.html)
+2. commit
+	> git commit -m "first commit" (git commit -m "Sửa đổi gì đó có thể ghi chú")
+3. push lên github
+	> git push iotnhom03 master
